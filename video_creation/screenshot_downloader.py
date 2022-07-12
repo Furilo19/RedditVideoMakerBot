@@ -32,7 +32,7 @@ def download_screenshots_of_reddit_posts(reddit_object: dict, screenshot_num: in
         print_substep("Launching Headless Browser...")
 
         browser = p.chromium.launch()
-        context = browser.new_context()
+        context = browser.new_context(locale='en-us')
 
         if settings.config["settings"]["theme"] == "dark":
             cookie_file = open("./video_creation/data/cookie-dark-mode.json", encoding="utf-8")
